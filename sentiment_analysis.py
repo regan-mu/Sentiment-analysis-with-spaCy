@@ -4,6 +4,7 @@ from spacy.lang.en import English
 import string
 from sklearn.base import TransformerMixin
 from spacy.lang.en.stop_words import STOP_WORDS
+import time
 
 
 class Predictors(TransformerMixin):
@@ -63,10 +64,14 @@ def main():
                 prediction = model.predict([text])[0]
                 if prediction == 1:
                     pred = 'POSITIVE'
-                    st.write('Prediction:', pred)
+                    with st.spinner('Loading ...'):
+                        time.sleep(5)
+                        st.write('Prediction:', pred)
                 elif prediction == 0:
                     pred = 'NEGATIVE'
-                    st.write('Prediction:', pred)
+                    with st.spinner('Loading ...'):
+                        time.sleep(5)
+                        st.write('Prediction:', pred)
 
     elif options == 'about':
         return about()
