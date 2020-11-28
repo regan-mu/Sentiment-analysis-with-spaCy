@@ -1,1 +1,1 @@
-web: gunicorn sentiment_analysis:app
+web: sh setup.sh && streamlit run sentiment_analysis.py

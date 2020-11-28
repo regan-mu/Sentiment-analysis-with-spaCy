@@ -6,7 +6,6 @@ from sklearn.base import TransformerMixin
 from spacy.lang.en.stop_words import STOP_WORDS
 
 
-@st.cache
 class Predictors(TransformerMixin):
 
     def transform(self, X, **transform_params):
@@ -24,7 +23,6 @@ parser = English()
 punctuation = string.punctuation
 
 
-@st.cache
 def spacy_tokenizer(sentence):
     tokens = parser(sentence)
     # lemmatize
