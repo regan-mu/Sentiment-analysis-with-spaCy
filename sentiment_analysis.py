@@ -39,6 +39,7 @@ def clean_text(text):
 
 # The about page
 def about():
+    st.header('About app')
     st.write('1. This sentiment analysis app can be used by organizations to analyse the customer reviews for \
          better decision making.')
     st.write('2. It relieves businesses off the tasks of having to sort the customer reviews manually.')
