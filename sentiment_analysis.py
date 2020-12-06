@@ -48,6 +48,7 @@ def about():
     st.write(' ')
     st.write('Model accuracy => 80%')
     st.write("Written by - Regan Muthomi")
+    st.subheader('Contact us on.')
     st.write('Email: regansomi@gmail.com')
 
 
