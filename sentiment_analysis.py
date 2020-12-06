@@ -47,16 +47,17 @@ def about():
     st.write(' ')
     st.write(' ')
     st.write('Model accuracy => 80%')
-    st.write("Written by - 'Regan Muthomi'")
+    st.write("Written by - Regan Muthomi")
+    st.write('Email: regansomi@gmail.com')
 
 
 def main():
     model = joblib.load('sentiment_model')
     st.title('Sentiment Analysis')
     st.subheader('Enter your reviews or texts, let the app do the rest')
-    dropdowns = ['home', 'about']
+    dropdowns = ['HOME', 'ABOUT']
     options = st.sidebar.selectbox('Select action', dropdowns)
-    if options == 'home':
+    if options == 'HOME':
         st.write('For more information about the app, go to about page')
         text = st.text_area('Enter Text here', max_chars=2000)
         if text is not None:
@@ -75,7 +76,7 @@ def main():
                         time.sleep(5)
                         st.write('Prediction:', pred)
 
-    elif options == 'about':
+    elif options == 'ABOUT':
         return about()
 
 
