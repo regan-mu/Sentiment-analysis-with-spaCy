@@ -54,7 +54,7 @@ def about():
 
 def main():
     model = joblib.load('sentiment_model')
-    st.title('Sentiment Analysis')
+    st.title('Product Reviews')
     st.subheader('Enter your reviews or texts, let the app do the rest')
     dropdowns = ['HOME', 'ABOUT']
     options = st.sidebar.selectbox('Select action', dropdowns)
